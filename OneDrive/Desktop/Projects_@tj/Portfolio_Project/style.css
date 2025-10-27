@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(b5,b5,b5);
+}
+
+/* trnasition */
+
+a,.btn{
+    transition: all 300ms ease;
+}
+
+/* Desktop nav */
+nav, .nav-links{
+  display: flex;  
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-style: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+
+#hamburger-nav{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color:white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+ display: block;
+ padding: 10px;
+ text-align: center;
+ font-size: 1.5rem;
+ color: black;
+ text-decoration: none;
+ transition: all 0.3 ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/*SECTIONS*/
+
+section{
+    padding: 4vh;
+    height: 96vh;
+    margin: 0 1rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 1rem;
+    height: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.section__pic-container{
+    display: flex;
+    align-items: center;
+    height: 220px;
+    width: 220px;
+    margin: 0;
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p{
+    font-weight: 600px;
+}
+
+.section_text_p1{
+    font-size: 1.50rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section_text_p2{
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2rem;
+    gap: 1rem;
+}
+
+
+.section__pic-container img {
+  width: 200px;            /* Adjust size as needed */
+  height: 200px;           /* Same as width for perfect circle */
+  border-radius: 50%; 
+  object-position: top;     /* Makes the image round */
+  object-fit: cover;       /* Crops image inside circle nicely */
+  display: block;
+}
+
+/* ICONS */
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Buttons */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;    
+}
+
+.btn-color-1, .btn-color-2{
+    border: rgb(53,53,53) 0.1rem solid;
+}
+
+.btn-color-1:hover, 
+.btn-color-2:hover{
+    cursor: pointer;
+}
+
+.btn-color-1, 
+.btn-color-2:hover{
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover{
+    background: rgb(0,0,0);
+}
+
+.btn-color-2{
+    background: none;
+}
+
+.btn-color-2:hover{
+    border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container{
+    gap: 1rem;
+}
+
+/* ABOUT SECTION*/
+
+#about{
+    position: relative;
+}
+
+
+
+.about-containers{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem; 
+}
+
+.about-details-container{
+    justify-content: center;
+    flex-direction: column; 
+    display: flex; 
+    padding-left: 0;
+    width: 100%; 
+}
+
+.about-containers,.about-details-container{
+    display: flex;
+}
+
+.about-pic {
+  margin-top: 10rem;       /* If you want lower on page */
+  width: 400px;
+  height: 400px;          /* SAME as width for perfect square */
+  border-radius: 0.5rem !important;  /* rounded corners */
+  object-fit: cover;
+  display: block;
+}
+
+
+.arrow{
+    position: absolute;
+    right: 1rem;
+    bottom: 2.5rem;
+}
+
+.details-container{
+  width: 260px;
+  min-height: 100px;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.section-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    height: 80%;
+}
+
+/* .section__pic-container {
+  flex-shrink: 0;            /* Prevent shrinking */
+  /* margin-right: 0.5rem;}      /* Small right margin to keep near cards */
+
+
+/* Description text below cards */
+.text-container {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 0.99rem;
+  color: #333;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0; /* reduce top and bottom padding */
+  margin: 0;
+}
+
+#experience .section_text_p1 {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0; /* remove top and bottom gap */
+  line-height: 1.2;
+}
+
+#experience .title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.3rem 0 1rem 0; /* very small gap below heading */
+  line-height: 1.2;
+}
+
+/* container for both boxes */
+.experience_details_container {
+  display: flex;
+  justify-content: center; /* centers both boxes */
+  align-items: flex-start;
+  gap: 3rem; /* controls spacing between them */
+  width: 80%;
+  margin: 1rem auto;
+}
+
+/* each box */
+.details-container {
+  background-color: white;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* box heading */
+.experience_sub_title {
+  color: rgb(50, 50, 50);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+/* articles inside boxes */
+.article_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* PROJECT SECTION */
+
+#projects {
+  position: relative;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+#projects .section_text_p1 {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#projects .title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.2;
+}
+
+/* All 3 project cards side by side */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Individual project box */
+.details-container.color-container {
+  background: white;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.details-container.color-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Image inside project card */
+.project-img {
+  border-radius: 12px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Project title */
+.project-title {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+/* Buttons */
+.project-btn {
+  color: black;
+  border-color: rgb(163,163,163);
+  background: none;
+}
+
+.project-btn:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+  border-color: rgb(53,53,53);
+}
+
+/* Arrow positioning */
+#projects .arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 2.5rem;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163,163,163);
+    background: rgb(250,250,250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.email-icon{
+    height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}
